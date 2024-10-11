@@ -8,7 +8,7 @@ param sqlAdminPassword string = 'g@G9@2nD7C1BP%uh'
 param deployments array = [
   {
     name: 'gpt-4o'
-    capacity: 40
+    capacity: 8
     version: '2024-05-13'
   }
   {
@@ -34,7 +34,7 @@ var cosmosDbName = '${uniqueString(resourceGroup().id)}-cosmosdb'
 var cosmosDbDatabaseName = 'ContosoSuites'
 var storageAccountName = '${uniqueString(resourceGroup().id)}sa'
 var searchServiceName = '${uniqueString(resourceGroup().id)}-search'
-var openAIName = '${uniqueString(resourceGroup().id)}-openai'
+var openAIName = '${uniqueString(resourceGroup().id)}-openai1'
 var speechServiceName = '${uniqueString(resourceGroup().id)}-speech'
 var languageServiceName = '${uniqueString(resourceGroup().id)}-lang'
 var webAppNameApi = '${uniqueString(resourceGroup().id)}-api'
@@ -50,6 +50,7 @@ var registrySku = 'Standard'
 var sqlServerName = '${uniqueString(resourceGroup().id)}-sqlserver'
 var sqlDatabaseName = 'ContosoSuitesBookings'
 var sqlAdminUsername = 'contosoadmin'
+
 
 var locations = [
   {

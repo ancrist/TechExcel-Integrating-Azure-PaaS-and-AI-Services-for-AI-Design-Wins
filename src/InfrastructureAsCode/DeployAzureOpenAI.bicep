@@ -8,7 +8,7 @@ param restore bool = false
 param deployments array = [
   {
     name: 'gpt-4o'
-    capacity: 40
+    capacity: 8
     version: '2024-05-13'
   }
   {
@@ -18,7 +18,7 @@ param deployments array = [
   }
 ]
 
-var openAIName = '${uniqueString(resourceGroup().id)}-openai'
+var openAIName = '${uniqueString(resourceGroup().id)}-openai1'
 
 @description('Creates an Azure OpenAI resource.')
 resource openAI 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
